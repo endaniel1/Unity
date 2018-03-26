@@ -1,0 +1,5 @@
+Space 		http://opengameart.org/content/space-parallax-background
+Ship 		http://opengameart.org/content/space-ship-0
+Bullets 	http://opengameart.org/content/bullet-collection-1-m484
+
+CC0 - Public Domain
