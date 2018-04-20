@@ -17,12 +17,18 @@ public class Ckeck_ground : MonoBehaviour {
 		if(col.gameObject.tag=="Ground"){
 			player.ground = true;//cambiamos el valor del Gruond
 		}
+		if(col.gameObject.tag=="Plaform"){
+			player.ground = true;//cambiamos el valor del Plaform
+		}
 
 	}
 	//funcion q es cuando salimos en una colicion
 	void OnCollisionExit2D(Collision2D col){
 		if(col.gameObject.tag=="Ground"){
-			player.ground = false;//cambiamos el valor del Gruond
+			player.ground = false;//cambiamos el valor del Plaform
+		}
+		if(col.gameObject.tag=="Plaform"){
+			player.ground = false;//cambiamos el valor del Plaform
 		}
 	}
 }
