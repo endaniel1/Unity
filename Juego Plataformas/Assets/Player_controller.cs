@@ -13,6 +13,8 @@ public class Player_controller : MonoBehaviour {
 	public float jumpPower=6.5f;
 
 	private bool jump;
+	private bool doublejump;
+
 	private Rigidbody2D rig2d;//caturamos el componente Rigidbody en una varible
 	private Animator anim;//caturamos el componente Animator en una varible
 	// Use this for initialization
@@ -28,9 +30,19 @@ public class Player_controller : MonoBehaviour {
 		anim.SetFloat ("Speed",Mathf.Abs(rig2d.velocity.x));//anim.SetFloat envia al animator 
 		//Mathf.Abs obtine el valor absoluto de un numero
 		anim.SetBool("Ground",ground);
+		//para el salto de precaucion 
+		if(ground){//comprobamos si estamos tocando el suelo 
+			doublejump = true;//y abilitamos el doble salto
+		}
 
-		if(Input.GetKeyDown(KeyCode.UpArrow) && ground){//detectando cuando presiona la tecla hacia arriba
-			jump=true;
+		if(Input.GetKeyDown(KeyCode.UpArrow) ){//detectando cuando presiona la tecla hacia arriba
+			if(ground){//comprovamos si estamos tocando el suelo
+				jump=true;
+				doublejump = true;//avilitamos para el doble salto q este caso sea true
+			}else if(doublejump){//ahora si doublejump es verdadero
+				jump=true;
+				doublejump = false;//inavilitamos para el doble salto q este caso sea false
+			}
 		}
 	}
 

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Ckeck_ground.cs" />
      <Compile Include="Assets\Dibuja_linea.cs" />
+     <Compile Include="Assets\Plataforma_Movil.cs" />
      <Compile Include="Assets\Player_controller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
