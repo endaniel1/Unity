@@ -17,11 +17,16 @@ public class Player_controller : MonoBehaviour {
 
 	private Rigidbody2D rig2d;//caturamos el componente Rigidbody en una varible
 	private Animator anim;//caturamos el componente Animator en una varible
+	private SpriteRenderer spr;//caturamos el componente SpriteRenderer en una varible q es el color
+	private bool movement=true;//varible q tiene el movimiento
+
 	// Use this for initialization
 	void Start () {
 		rig2d = GetComponent<Rigidbody2D> ();//detetamos el componente rigidbody al inciar el jugo
 		//de nnuestro personaje
 		anim = GetComponent<Animator> ();//detetamos el componente Animator al inciar el jugo
+		//de nnuestro personaje
+		spr = GetComponent<SpriteRenderer>();//detetamos el componente SpriteRenderer al inciar el jugo
 		//de nnuestro personaje
 	}
 	
@@ -57,6 +62,7 @@ public class Player_controller : MonoBehaviour {
 		}
 
 		float h = Input.GetAxis ("Horizontal");//detetamos la direcion horizontalmente
+		if(!movement) h=0;//esto lo q indica si la varible de movimiento no es verdadera la h vale 0
 
 		rig2d.AddForce (Vector2.right * speed * h);//se le anñane un vector de 2 dimensiones q vaya a la derecha
 		//despues se le multiplica por la velocidad q tenemos guardada y por la direcion
@@ -92,7 +98,31 @@ public class Player_controller : MonoBehaviour {
 
 
 	}
+	//este metodo es para cuendo el player sale fuera de la escena
 	void OnBecameInvisible(){
-		transform.position = new Vector3 (-1, 0, 0);
+		transform.position = new Vector3 (-1, 0, 0);//aqui su posiscion cambia a la q le asignamos
 	}
+
+	//este metoto es para saltar despues q destruimos al enemigo
+	public void Enemy_Jump(){
+		jump = true;//aqui jump cambia a true
+	}
+	//metodso q tiene cuando se choca con un enemigo
+	public void Enemy_Choque(float EnemyPosX){
+		jump = true;//aqui jump cambia a true
+		float side = Mathf.Sign(EnemyPosX - transform.position.x);
+		rig2d.AddForce (Vector2.left * side * jumpPower, ForceMode2D.Impulse);//esto lo q fenerara es una fuerza diagonal cuando se choca con el enemyigo
+
+		movement=false;//cambiamos la varible de movimiento a flase para q no se pueda mover mientra se choca
+		Invoke("EnableMovemnt",0.7f);//aqui mandamos a invocar la funcion EnableMovemnt despues de 0.7 segundo
+
+		Color color = new Color (255f/255f,106f/255f,0f/255f);//aasi creamos un nuevo color q nosostros mismo queremos
+		spr.color=color;//aqui cambimos el color a nuestro jugador q este caso es de rojo para cuando chocamos
+	}
+	//este metodo es para activar el movimiento 
+	public void EnableMovemnt(){
+		movement = true;
+		spr.color=Color.white;//aqui cambimos el color a nuestro jugador q este caso es de blanco porque no se liga con ninguncolor
+	}
+
 }
