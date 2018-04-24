@@ -1,0 +1,38 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'Scenario_mesh_0004.obj'
+
+# Vertices (Count = 12)
+v -8 -3 0
+v -9 -3 0
+v -9 -2 0
+v -8 -2 0
+v -9 -3 0
+v -10 -3 0
+v -10 -2 0
+v -9 -2 0
+v -10 -3 0
+v -11 -3 0
+v -11 -2 0
+v -10 -2 0
+
+# Texture cooridinates (Count = 8)
+vt 0.2023121 0.03612717
+vt 0.232659 0.03612717
+vt 0.232659 0.06647399
+vt 0.2023121 0.06647399
+vt 0.2355491 0.03612717
+vt 0.265896 0.03612717
+vt 0.265896 0.06647399
+vt 0.2355491 0.06647399
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g Scenario_mesh_0004
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/5/1 6/6/1 7/7/1 8/8/1
+f 9/1/1 10/2/1 11/3/1 12/4/1
+
