@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Varibles_entre_Scripts.unity
+  isLoaded: 1
+  isActive: 1
