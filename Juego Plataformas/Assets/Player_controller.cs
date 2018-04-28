@@ -19,6 +19,7 @@ public class Player_controller : MonoBehaviour {
 	private Animator anim;//caturamos el componente Animator en una varible
 	private SpriteRenderer spr;//caturamos el componente SpriteRenderer en una varible q es el color
 	private bool movement=true;//varible q tiene el movimiento
+	private GameObject RealHeath;//varilbe q tiene el objeto Image q es el q tiene lo de la vida
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,8 @@ public class Player_controller : MonoBehaviour {
 		//de nnuestro personaje
 		spr = GetComponent<SpriteRenderer>();//detetamos el componente SpriteRenderer al inciar el jugo
 		//de nnuestro personaje
+		RealHeath=GameObject.Find("RealHeath");//Find buscamos en la gerarquia de objetos el q se llama RealHeath
+		//no es muy recomendable utilizar ese metodo porquue puede relentizar pero como tenemos poco se se puede
 	}
 	
 	// Update is called once per frame
@@ -93,7 +96,7 @@ public class Player_controller : MonoBehaviour {
 			rig2d.AddForce (Vector2.up * jumpPower, ForceMode2D.Impulse);
 			jump = false;//y volvemos a reacinarle el valor a jump
 		}
-		Debug.Log (rig2d.velocity.x);
+		//Debug.Log (rig2d.velocity.x);
 
 
 
@@ -109,6 +112,9 @@ public class Player_controller : MonoBehaviour {
 	}
 	//metodso q tiene cuando se choca con un enemigo
 	public void Enemy_Choque(float EnemyPosX){
+
+		RealHeath.SendMessage ("TakeDamage",15f);//aqui lo q hacemos es mandar un mensaje a otro srcipt q ejeuta la funcion TakeDamage y le pasamo 15f q es el damño
+
 		jump = true;//aqui jump cambia a true
 		float side = Mathf.Sign(EnemyPosX - transform.position.x);
 		rig2d.AddForce (Vector2.left * side * jumpPower, ForceMode2D.Impulse);//esto lo q fenerara es una fuerza diagonal cuando se choca con el enemyigo

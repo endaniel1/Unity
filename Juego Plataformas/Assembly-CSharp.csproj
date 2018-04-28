@@ -54,6 +54,7 @@
      <Compile Include="Assets\Plataforma_Falling.cs" />
      <Compile Include="Assets\Plataforma_Movil.cs" />
      <Compile Include="Assets\Player_controller.cs" />
+     <Compile Include="Assets\RealHeath.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />

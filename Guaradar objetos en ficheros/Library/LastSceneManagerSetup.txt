@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/gUar_objetos_fichero.unity
+  isLoaded: 1
+  isActive: 1
