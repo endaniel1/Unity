@@ -74,6 +74,6 @@
   </Target>
   -->
   <ItemGroup>
-    <None Include="Assets\Persona.json" />
+    <None Include="Assets\Personas.json" />
   </ItemGroup>
 </Project>

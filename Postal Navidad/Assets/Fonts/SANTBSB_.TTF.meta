@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 939f628199435d64fba26b1251fd7d9b
+timeCreated: 1514130944
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Santas Big Secret BB
+  fontNames:
+  - Santas Big Secret BB
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
