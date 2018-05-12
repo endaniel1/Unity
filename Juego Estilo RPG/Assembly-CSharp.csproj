@@ -47,11 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Area_conttoller.cs" />
+     <Compile Include="Assets\Scripts\Arua_controller.cs" />
+     <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Controller_camera.cs" />
+     <Compile Include="Assets\Scripts\Controller_slang.cs" />
      <Compile Include="Assets\Scripts\Controller_warp.cs" />
      <Compile Include="Assets\Scripts\Destroy.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\FixDepth.cs" />
      <Compile Include="Assets\Scripts\Player_controller.cs" />
+     <Compile Include="Assets\Scripts\Rock.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
