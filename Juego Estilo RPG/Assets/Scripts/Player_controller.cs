@@ -200,7 +200,9 @@ public class Player_controller : MonoBehaviour {
 			movimientoPrevent = true;
 		} 
 	}
-
+	void Atacado(){
+		print ("Resivistes daño");
+	}
 	//metodo q carga para q no s mueva el persoaje
 	void MovientoPrevent(){
 		if(movimientoPrevent){//si es verdadera movimientoPrevent

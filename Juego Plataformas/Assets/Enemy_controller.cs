@@ -18,7 +18,7 @@ public class Enemy_controller : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		rig2d.AddForce (Vector2.right * speed);//se le anñane un vector de 2 dimensiones q vaya a la derecha
+		rig2d.AddForce (Vector2.right	 * speed);//se le anñane un vector de 2 dimensiones q vaya a la derecha
 
 		float limitSpeed = Mathf.Clamp (rig2d.velocity.x,-maxSpeed,maxSpeed);
 		rig2d.velocity = new Vector2 (limitSpeed , rig2d.velocity.y);

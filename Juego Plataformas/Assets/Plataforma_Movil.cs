@@ -12,8 +12,8 @@ public class Plataforma_Movil : MonoBehaviour {
 	void Start () {
 		if(target!=null){//comprovamos si no es null el target
 			target.parent = null;//aqui lo q hacemos es le quitamos la independencia al target q no sea el hijo
-			start=transform.position;//la posicion de la platforma 
-			end=target.position;
+			start=transform.position;//la posicion de la platforma cuando inica el juego
+			end=target.position;//y esto tiene la posicion de incio de nuestro target o en nuestro caso la posicion final q va nuestra plataforma q es el target
 		}
 	}
 	

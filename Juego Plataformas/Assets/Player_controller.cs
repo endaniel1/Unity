@@ -103,7 +103,7 @@ public class Player_controller : MonoBehaviour {
 	}
 	//este metodo es para cuendo el player sale fuera de la escena
 	void OnBecameInvisible(){
-		transform.position = new Vector3 (-1, 0, 0);//aqui su posiscion cambia a la q le asignamos
+		transform.position = new Vector3 (3.07f, 3.56f, 0);//aqui su posiscion cambia a la q le asignamos
 	}
 
 	//este metoto es para saltar despues q destruimos al enemigo
